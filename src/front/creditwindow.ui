@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CreditWindow</class>
+ <widget class="QMainWindow" name="CreditWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>851</width>
+    <height>625</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>795</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="5" column="1">
+      <widget class="QDoubleSpinBox" name="P">
+       <property name="minimum">
+        <double>0.500000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.250000000000000</double>
+       </property>
+       <property name="value">
+        <double>8.500000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QSpinBox" name="months">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>999</number>
+       </property>
+       <property name="value">
+        <number>12</number>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="3">
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Рассчитать</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Срок (в месяцах)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QSpinBox" name="creditsum">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>1000000000</number>
+       </property>
+       <property name="value">
+        <number>10000</number>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QRadioButton" name="radioButton_dif">
+       <property name="text">
+        <string>Дифференцированный платеж</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="2">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Общая выплата</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QRadioButton" name="radioButton_an">
+       <property name="text">
+        <string>Аннуированный платеж</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Процентная ставка (%)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="3">
+      <widget class="QDoubleSpinBox" name="payment_all">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="maximum">
+        <double>999999999999999983222784.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QDoubleSpinBox" name="payment_month">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="maximum">
+        <double>999999999999.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Сумма кредита (руб)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="QDoubleSpinBox" name="overpay">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="maximum">
+        <double>999999999.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="label_month_pay">
+       <property name="text">
+        <string>Ежемесячный платеж</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Переплата по кредиту</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>250</y>
+      <width>791</width>
+      <height>271</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_dif_payment">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>10</y>
+      <width>371</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Даипазон платежей</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="payment_month_min">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>0</y>
+      <width>189</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="maximum">
+     <double>999999999999.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="payment_month_max">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>0</y>
+      <width>189</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="maximum">
+     <double>999999999999.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>530</y>
+      <width>121</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Normal Calculator</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>851</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuCredit">
+    <property name="title">
+     <string>Credit</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionNormal"/>
+   </widget>
+   <addaction name="menuCredit"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNormal">
+   <property name="text">
+    <string>Normal</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
